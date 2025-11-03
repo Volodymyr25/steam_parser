@@ -13,7 +13,7 @@ def question():
     if name == "exit":
         console.print("Okey, bye!", style="bold bright_black")
         exit()
-    cc  = Prompt.ask("[bold cyan]Which country's currency[/bold cyan]", choices=["ua", "de", "it", "us", "jp"])
+    cc  = Prompt.ask("[bold cyan]Which country's currency[/bold cyan]")
     return name, cc
 
 def get_info(name, cc):
@@ -67,7 +67,7 @@ def print_info(response):
 if __name__ == "__main__":
     clear_screen()
     while True:
-        console.print("======================= [bold cyan]Software by Dargram[/bold cyan] =======================", style="italic bright_black")
+        console.print("======================= [bold cyan]Software by Dargram[/bold cyan] =======================", style="italic bright_black", justify="center")
         try:
             name, cc = question()
             print_info(get_info(name, cc))
