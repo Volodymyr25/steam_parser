@@ -3,6 +3,13 @@ import requests, os, json
 from rich.console import Console
 from rich.prompt import Prompt
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+                " AppleWebKit/537.36 (KHTML, like Gecko)"
+                " Chrome/120.0.0.0 Safari/537.36",
+    "Accept-Language": "q=0.9,en-US;q=0.8,en;q=0.7",
+}
+
 console = Console()
 
 def clear_screen():
@@ -20,7 +27,7 @@ def get_info(name, cc):
     clear_screen()
 
     response = requests.get("https://store.steampowered.com/api/storesearch/", timeout=5,
-                            params={"term": name, "cc": cc, "l": "ukrainian"}).json()
+                            params={"term": name, "cc": cc, "l": "ukrainian"}, headers=HEADERS).json()
 
     if not response.get("items"):
         console.print("[bold magenta]Game not found![/bold magenta]")
@@ -28,7 +35,7 @@ def get_info(name, cc):
 
     game_id = str(response['items'][0]['id'])
     response = requests.get("https://store.steampowered.com/api/appdetails", timeout=5,
-                            params={"appids": game_id, "cc": cc}).json()
+                            params={"appids": game_id, "cc": cc}, headers=HEADERS).json()
 
     if 'data' not in response[game_id]:
         console.print("This game is banned in your country!", style="bold red")
