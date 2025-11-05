@@ -72,4 +72,5 @@ This project is licensed under the MIT License. For more details, see the `LICEN
 
 ---
 **If you notice bugs or want to suggest ideas - meisdargram@gmail.com**
+
 **Note:** This project is not affiliated with Valve Corporation and uses publicly available data.
