@@ -5,7 +5,6 @@ import sys
 app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
-
 with open("GUI_steam_parser/style.qss", "r") as file:
     app.setStyleSheet(file.read())
     
