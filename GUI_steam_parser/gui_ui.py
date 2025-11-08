@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QLabel, QLineEdit,
+from PyQt6.QtWidgets import (QMainWindow, QLabel, QLineEdit,
                              QVBoxLayout, QHBoxLayout, QWidget, QPushButton)
 from PyQt6.QtCore import Qt
 import sys
@@ -45,12 +45,12 @@ class MainWindow(QMainWindow):
         content = QWidget()
         content.setLayout(content_layout)
         
-        
-        main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        
-        
+
         main_layout.addWidget(menu)
         main_layout.addWidget(content)
+        
+        menu_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        content_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         # === Під'єднання віджетів до ліній ===
         content_layout.addWidget(self.program_label, alignment=Qt.AlignmentFlag.AlignCenter)
