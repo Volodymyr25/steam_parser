@@ -16,10 +16,11 @@ class MainWindow(QMainWindow):
         menu_layout = QVBoxLayout()
         content_layout = QVBoxLayout()
 
+
         # === Створення віджетів ===
         self.program_label = QLabel("Software by Dargram")
         self.program_label.setObjectName("soft")
-        
+
         self.game_input = QLineEdit()
         self.game_input.setFixedSize(300,30)
         self.game_input.setPlaceholderText("Enter game name...")
@@ -29,10 +30,10 @@ class MainWindow(QMainWindow):
         self.currency_input.setFixedSize(300,30)
         self.currency_input.setPlaceholderText("Enter country's currency...(ua, de, it)")
         self.currency_input.setObjectName("currency_input")
-        
-        
+                
         self.game_info = QPushButton("Find info")
         self.game_info.setObjectName("game_info_btn")
+
 
         # === Створення контейнерів ===
         container = QWidget()
