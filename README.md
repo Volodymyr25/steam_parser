@@ -1,4 +1,4 @@
-# Steam Games Parser
+## Steam Games Parser
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -24,9 +24,8 @@ The current command-line interface (CLI) version supports:
 
 ## Functionality (GUI version)
 
-**Actively working on a graphical user interface version based on PyQt6.**
+**PyQt6**
 
-*   **Extended functionality** compared to the CLI version
 *   **User-friendly visual interface** for comfortable interaction
 *   **Improved error handling** and intuitive controls
 *   **Graphical data representation**
